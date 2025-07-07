@@ -3,13 +3,25 @@
     x:Class="RecaldeNExamen3.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:RecaldeNExamen3"
+    xmlns:views="clr-namespace:RecaldeNExamen3.Views"
     Shell.FlyoutBehavior="Disabled"
     Title="RecaldeNExamen3">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <TabBar>
+        <ShellContent
+            Title="Registro"
+            ContentTemplate="{DataTemplate views:Registro}" 
+            />
+
+        <ShellContent
+            Title="Lista"
+            ContentTemplate="{DataTemplate views:ListaVehiculos}" 
+            />
+
+        <ShellContent
+            Title="Log"
+            ContentTemplate="{DataTemplate views:Log}" 
+            />
+    </TabBar>
 
 </Shell>

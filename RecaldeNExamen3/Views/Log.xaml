@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:namespace="clr-namespace:RecaldeNExamen3.ViewModel"       
+             x:Class="RecaldeNExamen3.Views.Log"
+             Title="Log">
+
+    <ContentPage.BindingContext>
+        <namespace:VehiculoViewModel/>
+    </ContentPage.BindingContext>
+
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label Text="{Binding LeerLogs}" />
+            <Button Text="Recargar" Clicked="RecargarPagina" HeightRequest="300" WidthRequest="300" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:namespace="clr-namespace:RecaldeNExamen3.ViewModel"
+             x:Class="RecaldeNExamen3.Views.Registro"
+             Title="Registro">
+
+    <ContentPage.BindingContext>
+        <namespace:VehiculoViewModel/>
+    </ContentPage.BindingContext>
+
+    <VerticalStackLayout Padding="20">
+        <Label Text="Nicolás Recalde - 07/07/20225" FontAttributes="Bold" FontSize="20" />
+        <Entry Placeholder="Marca" Text="{Binding Marca}" />
+        <Entry Placeholder="Modelo" Text="{Binding Modelo}" />
+        <Entry Placeholder="Año de Fabricación" Keyboard="Numeric" Text="{Binding AnioFabricacion}" />
+        <Entry Placeholder="Placa" Text="{Binding Placa}" />
+        <Button Text="Guardar" Clicked="Button_Clicked" />
+    </VerticalStackLayout>
+</ContentPage>

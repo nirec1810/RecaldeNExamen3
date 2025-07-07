@@ -20,6 +20,8 @@ namespace RecaldeNExamen3.ViewModel
         private string _modelo;
         private int _anioFabricacion;
         private string _placa;
+        private string _leerLogs;
+
 
         public VehiculoViewModel()
         {
@@ -61,6 +63,16 @@ namespace RecaldeNExamen3.ViewModel
             }
         }
 
+        public string LeerLogs
+        {
+            get => _leerLogs;
+            set
+            {
+                _leerLogs = value;
+                OnPropertyChanged();
+            }
+        }
+
         private ObservableCollection<Vehiculo> _listaVehiculos;
         public ObservableCollection<Vehiculo> ListaVehiculos
         {
@@ -87,7 +99,11 @@ namespace RecaldeNExamen3.ViewModel
             ListaVehiculos = new ObservableCollection<Vehiculo>(lista);
         }
 
-        public string LeerLogs() => File.Exists(_rutaLog) ? File.ReadAllText(_rutaLog) : "Sin registros.";
+
+        public void CargarLogs()
+        {
+            LeerLogs = File.Exists(_rutaLog) ? File.ReadAllText(_rutaLog) : "Sin registros.";
+        }
 
         public event PropertyChangedEventHandler? PropertyChanged;
         public void OnPropertyChanged([CallerMemberName] string name = "") =>
