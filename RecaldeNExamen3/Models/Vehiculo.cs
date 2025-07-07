@@ -8,7 +8,7 @@ using SQLite;
 namespace RecaldeNExamen3.Models
 {
     [Table("Vehiculo")]
-    internal class VehiculoModel
+    internal class Vehiculo
     {
         [AutoIncrement, PrimaryKey]
         public int Id { get; set; }
