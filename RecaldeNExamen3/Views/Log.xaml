@@ -10,10 +10,24 @@
     </ContentPage.BindingContext>
 
     <ScrollView>
-        <VerticalStackLayout>
-            <Label Text="{Binding LeerLogs}" />
-            <Button Text="Recargar" Clicked="RecargarPagina" HeightRequest="300" WidthRequest="300" />
+        <VerticalStackLayout Padding="20" Margin="10" Spacing="15"
+                         BackgroundColor="#FAFAFA">
+            <Label 
+                Text="{Binding LeerLogs}"
+                TextColor="#2C3E50"
+                FontSize="16" />
+            <Button 
+                Text="Recargar"
+                Clicked="RecargarPagina"
+                BackgroundColor="#27AE60"
+                TextColor="White"
+                CornerRadius="8"
+                FontAttributes="Bold"
+                HeightRequest="50"
+                WidthRequest="120"
+                HorizontalOptions="Start" />
         </VerticalStackLayout>
     </ScrollView>
+
 
 </ContentPage>

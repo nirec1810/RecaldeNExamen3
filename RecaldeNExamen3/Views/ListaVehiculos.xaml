@@ -13,14 +13,38 @@
         
         <CollectionView.ItemTemplate>
             <DataTemplate>
-                <VerticalStackLayout Padding="10">
-                    <Label Text="{Binding Marca}" FontAttributes="Bold" />
-                    <Label Text="{Binding Modelo}" />
-                    <Label Text="{Binding AnioFabricacion}" />
-                    <Label Text="{Binding Placa}" />
-
-                    <Button Text="Recargar" Clicked="RecargarPagina" />
+                <VerticalStackLayout Padding="25" Margin="10" Spacing="12"
+                     BackgroundColor="#F0F0F0">
+                    <Label 
+                        Text="{Binding Marca}" 
+                        FontAttributes="Bold" 
+                        FontSize="18"
+                        TextColor="#2C3E50" />
+                    <Label 
+                        Text="{Binding Modelo}" 
+                        FontSize="16"
+                        TextColor="#34495E" />
+                    <Label 
+                        Text="{Binding AnioFabricacion}" 
+                        FontSize="16"
+                        TextColor="#34495E" />
+                    <Label 
+                    Text="{Binding Placa}" 
+                    FontSize="16"
+                    TextColor="#34495E" />
+                    <Button 
+                    Text="Recargar"
+                    Clicked="RecargarPagina"
+                    BackgroundColor="#2980B9"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    CornerRadius="8"
+                    HeightRequest="45"
+                    WidthRequest="120"
+                    HorizontalOptions="Start"
+                    Margin="0,15,0,0" />
                 </VerticalStackLayout>
+
             </DataTemplate>
         </CollectionView.ItemTemplate>
 
